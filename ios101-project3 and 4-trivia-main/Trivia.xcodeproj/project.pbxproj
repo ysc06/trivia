@@ -16,6 +16,7 @@
 		F21535DF2E144E9C00D0F613 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21535DE2E144E9C00D0F613 /* ResultViewController.swift */; };
 		F234CCF22E145A4B00DCB10F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F234CCF12E145A4B00DCB10F /* Main.storyboard */; };
 		F234CCF42E145F3600DCB10F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234CCF32E145F3600DCB10F /* ViewController.swift */; };
+		F234CCF82E1E28AF00DCB10F /* TriviaQuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234CCF72E1E28AF00DCB10F /* TriviaQuestionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F21535DE2E144E9C00D0F613 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F234CCF12E145A4B00DCB10F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F234CCF32E145F3600DCB10F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F234CCF72E1E28AF00DCB10F /* TriviaQuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaQuestionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F234CCF12E145A4B00DCB10F /* Main.storyboard */,
 				9926AB2C29DFAE1400860532 /* Assets.xcassets */,
 				9926AB3129DFAE1400860532 /* Info.plist */,
+				F234CCF72E1E28AF00DCB10F /* TriviaQuestionService.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F234CCF82E1E28AF00DCB10F /* TriviaQuestionService.swift in Sources */,
 				9926AB2429DFAE1400860532 /* AppDelegate.swift in Sources */,
 				9926AB2629DFAE1400860532 /* SceneDelegate.swift in Sources */,
 				F234CCF42E145F3600DCB10F /* ViewController.swift in Sources */,

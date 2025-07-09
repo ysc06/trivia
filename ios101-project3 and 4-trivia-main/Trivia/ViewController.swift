@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     
     
-
+    
     var questions: [Question] = [
         Question(text: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: "4"),
         Question(text: "Capital of France?", answers: ["Berlin", "Paris", "Madrid", "Rome"], correctAnswer: "Paris"),
@@ -29,12 +29,12 @@ class ViewController: UIViewController {
     
     var currentIndex = 0
     var correctAnswers = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showQuestion()
     }
-
+    
     func showQuestion() {
         let q = questions[currentIndex]
         questionLabel.text = q.text
@@ -44,29 +44,33 @@ class ViewController: UIViewController {
         answerButton4.setTitle(q.answers[3], for: .normal)
         
     }
-
+    
     @IBAction func answerTapped(_ sender: UIButton) {
         guard currentIndex < questions.count else { return }
-
+        
         if sender.currentTitle == questions[currentIndex].correctAnswer {
             correctAnswers += 1
         }
-
+        
         currentIndex += 1
-
+        
         if currentIndex < questions.count {
             showQuestion()
         } else {
             performSegue(withIdentifier: "showResult", sender: nil)
         }
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showResult" {
-            let destination = segue.destination as! ResultViewController
-            destination.finalScore = correctAnswers
-            destination.totalQuestions = questions.count
-        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentIndex = 0
+        correctAnswers = 0
+        
+        // Optional: Fetch new questions from API
+        // Or reuse existing ones
+        showQuestion()
     }
 }
+    
+
 
